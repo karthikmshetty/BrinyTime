@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="brinyTime_tests.Search_Product_Script">
+		  <methods>
+			  <include name="searchProduct"></include>
+		  </methods>
+      </class>
+      
+      <class name="brinyTime_tests.Create_Category_ScriptTest">
+		  <methods>
+			  <include name="createCategory"></include>
+		  </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

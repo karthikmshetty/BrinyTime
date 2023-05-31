@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1383" started-at="2023-05-30T12:38:04 IST" finished-at="2023-05-30T12:38:06 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1383" started-at="2023-05-30T12:38:04 IST" finished-at="2023-05-30T12:38:06 IST">
+      <class name="practice.DataProvider_Excel">
+        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="10" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ProductName]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Category]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Price]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="8" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Samsungs21]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mobiles]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[21000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="2" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Redmi 7Pro]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mobiles]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[14000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="2" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dell]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Laptop]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[50000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+      </class> <!-- practice.DataProvider_Excel -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
