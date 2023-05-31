@@ -17,7 +17,8 @@ import brinyTimeGenericUtility.JavaUtility;
 import brinyTimeGenericUtility.WebDriverUtility;
 
 public class Create_Category_Script extends BaseClass {
-	//Debasis is a Master
+	//Debasis is a Master : Pull
+	//Debasis is a master : Push
 	@Test
 	public void createCategory() throws Throwable
 	{
