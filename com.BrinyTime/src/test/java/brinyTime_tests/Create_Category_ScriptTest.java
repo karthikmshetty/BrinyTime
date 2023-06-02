@@ -20,7 +20,7 @@ public class Create_Category_ScriptTest extends BaseClass {
 			CategoryPage categoryPage = new CategoryPage(driver);
 			
 			categoryPage.createCategory(categoryName, categoryDescription, driver);
-			Assert.fail(); //To fail , bcz check the screenShot
+			//Assert.fail(); //To fail , bcz check the screenShot
 	
 	}
 }
