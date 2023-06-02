@@ -8,5 +8,6 @@ public interface IPathConstant {
    String mySQLPassword="root";
    int implicitWaitDuration=10;
    int explicitWaitDuration=10;
+   //
    
 }
