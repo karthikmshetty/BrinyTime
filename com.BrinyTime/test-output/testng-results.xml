@@ -1,97 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1383" started-at="2023-05-30T12:38:04 IST" finished-at="2023-05-30T12:38:06 IST">
+  <suite started-at="2023-06-02T12:39:38 IST" name="Default suite" finished-at="2023-06-02T12:40:47 IST" duration-ms="69701">
     <groups>
+      <group name="smokeTest">
+        <method signature="Create_Category_ScriptTest.createCategory()[pri:0, instance:brinyTime_tests.Create_Category_ScriptTest@4310d43]" name="createCategory" class="brinyTime_tests.Create_Category_ScriptTest"/>
+      </group> <!-- smokeTest -->
     </groups>
-    <test name="Default test" duration-ms="1383" started-at="2023-05-30T12:38:04 IST" finished-at="2023-05-30T12:38:06 IST">
-      <class name="practice.DataProvider_Excel">
-        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="10" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ProductName]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Category]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Price]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-06-02T12:39:38 IST" name="Default test" finished-at="2023-06-02T12:40:47 IST" duration-ms="69701">
+      <class name="brinyTime_tests.Create_Category_ScriptTest">
+        <test-method is-config="true" signature="beforeClass_Config()[pri:0, instance:brinyTime_tests.Create_Category_ScriptTest@4310d43]" started-at="2023-06-02T12:39:38 IST" name="beforeClass_Config" finished-at="2023-06-02T12:40:27 IST" duration-ms="49873" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="8" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Samsungs21]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Mobiles]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[21000]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeClass_Config -->
+        <test-method is-config="true" signature="beforeMethod_Config()[pri:0, instance:brinyTime_tests.Create_Category_ScriptTest@4310d43]" started-at="2023-06-02T12:40:28 IST" name="beforeMethod_Config" finished-at="2023-06-02T12:40:38 IST" duration-ms="10628" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="2" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Redmi 7Pro]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Mobiles]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[14000]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeMethod_Config -->
+        <test-method signature="createCategory()[pri:0, instance:brinyTime_tests.Create_Category_ScriptTest@4310d43]" started-at="2023-06-02T12:40:38 IST" name="createCategory" finished-at="2023-06-02T12:40:46 IST" duration-ms="7499" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method status="PASS" signature="getData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataProvider_Excel@33723e30]" name="getData" duration-ms="2" started-at="2023-05-30T12:38:06 IST" data-provider="data" finished-at="2023-05-30T12:38:06 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Dell]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Laptop]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[50000]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- createCategory -->
+        <test-method is-config="true" signature="afterMethod_Config()[pri:0, instance:brinyTime_tests.Create_Category_ScriptTest@4310d43]" started-at="2023-06-02T12:40:46 IST" name="afterMethod_Config" finished-at="2023-06-02T12:40:46 IST" duration-ms="695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-      </class> <!-- practice.DataProvider_Excel -->
+        </test-method> <!-- afterMethod_Config -->
+        <test-method is-config="true" signature="afterClass_Config()[pri:0, instance:brinyTime_tests.Create_Category_ScriptTest@4310d43]" started-at="2023-06-02T12:40:46 IST" name="afterClass_Config" finished-at="2023-06-02T12:40:47 IST" duration-ms="830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass_Config -->
+      </class> <!-- brinyTime_tests.Create_Category_ScriptTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
