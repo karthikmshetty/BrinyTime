@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="brinyTime_tests.Create_Category_ScriptTest">
+      <class name="practice.Map_DataProvider">
         <methods>
-          <include name="afterClass_Config"/>
-          <include name="afterMethod_Config"/>
-          <include name="createCategory"/>
-          <include name="beforeMethod_Config"/>
-          <include name="beforeClass_Config"/>
+          <include name="getData"/>
         </methods>
-      </class> <!-- brinyTime_tests.Create_Category_ScriptTest -->
+      </class> <!-- practice.Map_DataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
