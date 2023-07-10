@@ -29,6 +29,7 @@ public class ListnerImplementClass implements ITestListener {
 	//just creating empty report
 		public void onStart(ITestContext context) 
 		{
+			//To create one empty report structer
 			ExtentSparkReporter htmlreport=new ExtentSparkReporter("./extentReport/report.html");
 		//To set the Title for report
 		htmlreport.config().setDocumentTitle("Kusnap online");
@@ -40,7 +41,7 @@ public class ListnerImplementClass implements ITestListener {
 		
 		
 		 report = new ExtentReports();
-		report.attachReporter(htmlreport);
+		report.attachReporter(htmlreport); // we created blank report now attaching with extent report.
 		
 		
 		//like jira we are setting all the information
@@ -95,7 +96,7 @@ test.log(Status.PASS, methodName+"--Passed");
 
 		test.log(Status.PASS, methodName+"--Skipped");
 		
-		test.log(Status.SKIP, methodName+"skipped");
+		
 		test.log(Status.SKIP, result.getThrowable());//To throw the exception in report bcz if the test case fails there will be exception	
 		
 	}
