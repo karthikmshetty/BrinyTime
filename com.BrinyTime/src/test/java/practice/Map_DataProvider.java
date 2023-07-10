@@ -1,12 +1,11 @@
 package practice;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
-import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -15,42 +14,39 @@ import org.testng.annotations.Test;
 
 public class Map_DataProvider {
 	
-	
-	@Test(dataProvider = "multipleData")
-public void getData(Map data)
-{
-	System.out.println(data.get("USERNAME"));
-	System.out.println(data.get("PASSWORD"));
+	@Test(dataProvider = "testData")
+	public void getData(HashMap<Object,Object> data)
+	{
+		
+		System.out.println(data.get("UserName")+" "+data.get("LastName")+(" ")+data.get("Password"));
 
-}
+	}
+	@DataProvider(name="testData")
+	public Object[][] main() throws Throwable {
+		
+		FileInputStream fileInputStream = new FileInputStream(".\\src\\test\\resources\\TestData\\Map_TestData.xlsx");
+	    
+		Workbook wb = WorkbookFactory.create(fileInputStream);
+		Sheet sheet = wb.getSheet("TestData");
+		int lastRowNum = sheet.getLastRowNum();
+		short lastCellNum = sheet.getRow(0).getLastCellNum();
 
-	
-	
-@DataProvider
-public Map<Object, Object> multipleData() throws Throwable, FileNotFoundException, IOException
-{
-	Workbook wb = WorkbookFactory.create(new FileInputStream("C:\\Users\\hp\\git\\repository3\\com.BrinyTime\\src\\test\\resources\\TestData\\Testdata_adminPage.xlsx"));
-
-	Sheet sheet = wb.getSheet("MapDataProvider");
-	int lastRow=sheet.getLastRowNum()+1;
-    int lastCell=sheet.getRow(0).getLastCellNum();
-   
-    //Object[][] a =new Object[lastRow][lastCell];
-    HashMap<Object, Object> map = new HashMap<Object,Object>();
-    
-    for(int i=1;i<lastRow;i++)   // i=1 bcz heading should not repeat
-    {
-    	for(int j=0;j<lastCell;j++)
-    	{
-    		map.put(sheet.getRow(0).getCell(j).toString(),sheet.getRow(i).getCell(j).toString() );
-    		
-    	}
-    	//a[i][0]=map;  //store pair of key and value 
-    	
-    	
-    }
-    return map;
-	
-}
-
+		Object[][] obj = new Object[lastRowNum][1];
+		for (int i = 1; i <=lastRowNum; i++)
+		
+		{
+			HashMap<Object, Object> hashMap = new HashMap<Object,Object>();
+			for (int j = 0; j <lastCellNum; j++)
+			{
+				
+				String key= sheet.getRow(0).getCell(j).toString();
+				//DataFormatter dataFormatter = new DataFormatter();
+				String value = sheet.getRow(i).getCell(j).toString();
+				hashMap.put(key, value);
+				
+			}
+			obj[i-1][0]=hashMap;				
+		}	
+		return obj;
+	}	
 }

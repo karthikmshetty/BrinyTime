@@ -26,7 +26,7 @@ Workbook wb=WorkbookFactory.create(new FileInputStream("C:\\Users\\hp\\eclipse-w
 	int lastRow=sheet.getLastRowNum()+1; //it starts count from 0
 	int lastCell=sheet.getRow(0).getLastCellNum(); //it starts count from 1
 
-	Object[][] arr=new Object[lastRow][lastCell];
+	Object[][] arr=new Object[lastRow][lastCell]; // while initialising we should give with normal number fromat.so +1 used there.
 	
 	for(int i=0;i<lastRow;i++) 
 	{

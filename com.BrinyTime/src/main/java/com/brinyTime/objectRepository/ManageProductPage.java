@@ -78,7 +78,7 @@ public class ManageProductPage {
 		Thread.sleep(3000);
 		String prod=searchedProduct.getText().toLowerCase();
 		
-		Assert.assertTrue(prod.contains(product.toLowerCase()),"Searched Product is present ");
+		Assert.assertTrue(prod.contains(product.toLowerCase()),"Searched Product is not present ");
 		
 		Reporter.log("Searched product present",true);
 //		if(prod.contains(product.toLowerCase()))

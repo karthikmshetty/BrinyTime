@@ -12,80 +12,102 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ListnerImplementClass implements ITestListener {
 
-	public void onTestStart(ITestResult result) {
+	ExtentReports report;
+	ExtentTest test;
+	
+	
+	//just creating empty report
+		public void onStart(ITestContext context) 
+		{
+			ExtentSparkReporter htmlreport=new ExtentSparkReporter("./extentReport/report.html");
+		//To set the Title for report
+		htmlreport.config().setDocumentTitle("Kusnap online");
+		// set the theme
+		htmlreport.config().setTheme(Theme.DARK);
+		//
+		htmlreport.config().setReportName("kusnap");
+		// all the above for physical representation
 		
-	}
-
-	public void onTestSuccess(ITestResult result) {
-	}
+		
+		 report = new ExtentReports();
+		report.attachReporter(htmlreport);
+		
+		
+		//like jira we are setting all the information
+		report.setSystemInfo("Base-Browser","chrome");
+		report.setSystemInfo("OS","Windows");
+		report.setSystemInfo("Base-Url","https://localhost:8080");
+		report.setSystemInfo("reporterName","Karthik");
+		
+		}
 
 	
+	public void onTestStart(ITestResult result) 
+	{
+		//execution starts from here
+
+		String methodName = result.getMethod().getMethodName();
+		test=report.createTest(methodName);
+		Reporter.log(methodName+"---TestScript execution starts");
+	
+	}
+
+	public void onTestSuccess(ITestResult result) 
+	{
+		String methodName = result.getMethod().getMethodName();
+test.log(Status.PASS, methodName+"--Passed");
+	}
+ 
+	
 	public void onTestFailure(ITestResult result) {
-		String testName = result.getMethod().getMethodName();
-		System.out.println("Test Script Got Fail");
+		String methodName = result.getMethod().getMethodName();
+		
+		test.log(Status.FAIL, methodName+"--Failed");
+
+		
+		
 		WebDriverUtility wdu =  new WebDriverUtility();
+		
 		try {
-			wdu.takeScreenShot(BaseClass.sdriver, testName);
+			wdu.takeScreenShot(BaseClass.sdriver, methodName);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
+
 			e1.printStackTrace();
 		}
-//		TakesScreenshot screen=(TakesScreenshot)BaseClass.sdriver;
-//		File src = screen.getScreenshotAs(OutputType.FILE);
-//		LocalDateTime date=LocalDateTime.now();
-//		String cDate = date.toString().replace(" ","_").replace(":","-");
-//		try {
-//			FileUtils.copyFile(src,new File(".\\ScreenShot\\"+testName+""+cDate+".png"));
-//		} catch (IOException e) {
-//			e.printStackTrace();
-		}
+	}
 	
 	
 
 	
 	public void onTestSkipped(ITestResult result) {
+		
+		String methodName = result.getMethod().getMethodName();
+
+		test.log(Status.PASS, methodName+"--Skipped");
+		
+		test.log(Status.SKIP, methodName+"skipped");
+		test.log(Status.SKIP, result.getThrowable());//To throw the exception in report bcz if the test case fails there will be exception	
+		
 	}
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-	}
-
-	public void onTestFailedWithTimeout(ITestResult result) {
-	}
-
-	public void onStart(ITestContext context) {
-	}
-
+	
+	
 	public void onFinish(ITestContext context) {
+		
+		//clean the old report
+		report.flush();
+		
 	}
 
-	
-	@Override
-	public boolean equals(Object arg0) {
-		// TODO Auto-generated method stub
-		return super.equals(arg0);
-	}
-
-	@Override
-	protected void finalize() throws Throwable {
-		// TODO Auto-generated method stub
-		super.finalize();
-	}
-
-	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return super.hashCode();
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
-	
-	
 
 }
