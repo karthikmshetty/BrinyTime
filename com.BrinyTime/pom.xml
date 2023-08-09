@@ -10,7 +10,13 @@
 			<version>4.9.1</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.co(//div[@class="form-textbox "])[1]/inputm/artifact/com.aventstack/extentreports -->
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
@@ -18,11 +24,7 @@
 </dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>

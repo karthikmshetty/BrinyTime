@@ -14,6 +14,7 @@ public void deleteCategory() throws Throwable
 			String categoryDescription=eu.getExcelData("Sheet1",3,7);
 			
 			CategoryPage categoryPage = new CategoryPage(driver);
+			
 			categoryPage.createCategory(categoryName, categoryDescription, driver);
 			Thread.sleep(3000);
   driver.findElement(By.xpath("//tbody[@aria-live=\"polite\"]/tr/td[text()='"+categoryName+"']//../descendant::i[@class=\"icon-remove-sign\"]")).click();
@@ -22,10 +23,6 @@ public void deleteCategory() throws Throwable
   categoryPage.deleteCategory();
   
 			
-			
-			
-			
-			
-	}
+}
 
 }

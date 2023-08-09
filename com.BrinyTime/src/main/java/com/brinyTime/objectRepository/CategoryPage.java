@@ -14,7 +14,6 @@ import org.testng.Reporter;
 
 public class CategoryPage {
 	
-	
 	//declaration
 	@FindBy(xpath ="//a[text()=' Create Category ']")
 	private WebElement categoryModule;
